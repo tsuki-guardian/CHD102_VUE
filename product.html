@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/col.css">
+    <!-- use google fonts "Inter & Noto Sans" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- ------------------------------------ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ------------------------------------ -->
+    <title>商品列表</title>
+</head>
+<body>
+    <div id="app">
+    <header class="todomain-header">
+        <div class="mobile-logo">
+            <a href="index.html"><img :src="logo.gold" alt="logo"></a>
+        </div>
+        <input type="checkbox" id="menu-switch">
+        <input type="checkbox" id="search-switch">
+        <div class="header-wrap">
+            <div class="logo">
+                <a href="index.html">
+                    <img :src="logo.gold" alt="logo">
+                </a>
+            </div>
+            <div class="header-main">
+                <label class="hb" for="menu-switch">
+                    <span v-for="index in 3" :key="index"></span>
+                </label>
+                <nav class="navList">
+                    <ul class="navList-content">
+                        <li v-for="item in [home, about, news, product, customized, contactUs]" :key="item.index">
+                            <a :href="item.link"><span>{{item.name_en}}</span>{{item.name_tw}}</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <input class="search-bar" type="search" id="search" placeholder="搜尋商品" v-model="searchText">
+                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <label class="mobile-search" for="search-switch">
+                    <i class="fa-solid fa-magnifying-glass"></i><br>
+                    <span>搜尋商品</span>
+                </label>
+                <div class="login">
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span class="login-btn">登入/註冊</span>
+                </div>
+                <div class="shopping-cart">
+                    <i class="fa-solid fa-cart-shopping">
+                        <div class="cart-quantity"><span>0</span></div>
+                    </i>
+                    <div class="cart-word">購物車</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="product">
+            <div class="container">
+                <ul class="product-list">
+                    <li v-for="item in [...productList]" :key="item.index"><a :href="item.link"><img :src="item.img" alt=""><span :style="item.style">{{item.name_tw}}</span></a></li>
+                </ul>
+                <div class="hot-title">
+                    <div class="main_text">
+                        <h3>熱門作品</h3>
+                    </div>
+                    <div class="sub_text">
+                        <h3>POPUKAR WORS</h3>
+                    </div>
+                </div>
+                <div class="product-large-pic">
+                    <img :src="productLargePic.img" alt="">
+                </div>
+                <div class="product-small-pic row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                    <div class="col" v-for="(item, index) in smallCard" :key="index"><div class="sp"><a href="#"><img :src="item.img" alt=""></a></div></div>
+                </div>
+                <div class="product-bot">
+                    <a href="#" class="get-more-btn">更多主題作品</a>
+                </div>
+            </div>
+        </section>
+        <div class="go-top-btn">
+            <button onclick="topFunction()" id="myBtn" title="回到首頁"><i class="fa-solid fa-angles-up"></i></button>
+        </div>
+    </main>
+    <footer class="todomain-footer">
+        <div class="footer-line">
+            <img src="pic/linear-gradient-gold.png" alt="footer-line">
+        </div>
+        <div class="footer-logo">
+                <img :src="logo.white" alt="logo">
+        </div>
+        <div class="copy-right">
+            <p>©SOTSU・SUNRISE ©SOTSU・SUNRISE・MBS ©SOTSU・SUNRISE・TV TOKYOCopyright ©Bandai Namco Filmworks Inc. All rights reserved.</p>
+            <p>＊Note:No reproduction of contents and images is allowed.</p>
+        </div>
+    </footer>
+</div>
+    <script class="goTop">
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // 向下滾動20px時顯示按鈕
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // 點擊時回到最頂部
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+
+                    logo: {
+                        gold: "pic/todomain_logo_gold.svg",
+                        white: "pic/todomain_logo_white.svg"
+                    },
+
+                    home: {
+                        index: "home",
+                        link: "index.html",
+                        name_tw: "首頁",
+                        name_en: "Home"
+                    },
+
+                    about: {
+                        index: "about-us",
+                        link: "about-us.html",
+                        name_tw: "關於我們",
+                        name_en: "About"
+                    },
+
+                    news: {
+                        index: "news",
+                        link: "#",
+                        name_tw: "最新消息",
+                        name_en: "News"
+                    },
+
+                    product: {
+                        index: "product",
+                        link: "product.html",
+                        name_tw: "產品列表",
+                        name_en: "Product"
+                    },
+
+                    customized: {
+                        index: "customized",
+                        link: "#",
+                        name_tw: "客製化",
+                        name_en: "Customized"
+                    },
+
+                    contactUs: {
+                        index: "contactUs",
+                        link: "#",
+                        name_tw: "聯絡我們",
+                        name_en: "Contact us"
+                    },
+
+                    productLargePic: {
+                        img: "pic/product-card/fate.png"
+                    },
+
+                    smallCard: [
+                        {img: "pic/product-card/hl.png"},
+                        {img: "pic/product-card/jk.png"},
+                        {img: "pic/product-card/ds.png"},
+                        {img: "pic/product-card/tr.png"},
+                        {img: "pic/product-card/mhr.png"},
+                        {img: "pic/product-card/kc.png"},
+                        {img: "pic/product-card/fgo.png"},
+                        {img: "pic/product-card/ss.png"},
+                        {img: "pic/product-card/mo.png"},
+                        {img: "pic/product-card/bb.png"},
+                        {img: "pic/product-card/od.png"},
+                        {img: "pic/product-card/ks.png"},
+                        {img: "pic/product-card/mc.png"},
+                        {img: "pic/product-card/hm.png"},
+                        {img: "pic/product-card/tf.png"},
+                        {img: "pic/product-card/um.png"},
+                        {img: "pic/product-card/gbf.png"},
+                        {img: "pic/product-card/hk.png"},
+                        {img: "pic/product-card/pc.png"},
+                        {img: "pic/product-card/im.png"}
+                    ],
+
+                    productList: [
+                        {
+                            link: "product.html",
+                            img: "pic/icon_hot_y.png",
+                            style: "color: #DEAA40;",
+                            name_tw: "熱門作品"
+                        },
+                        {
+                            link: "product-gundam.html",
+                            img: "pic/icon_gundam.png",
+                            name_tw: "鋼彈模型"
+                        },
+                        {
+                            link: "product-figure.html",
+                            img: "pic/icon_scale_figure.png",
+                            name_tw: "比例模型"
+                        },
+                        {
+                            link: "#",
+                            img: "pic/icon_GPX.png",
+                            name_tw: "閃電霹靂車"
+                        },
+                        {
+                            link: "#",
+                            img: "pic/icon_to_assemble.png",
+                            name_tw: "組裝模型"
+                        }
+                    ],
+
+                    searchText:""
+                }
+            }
+        }).mount('#app')
+        //mount:渲染
+    </script>
+</body>
+</html>

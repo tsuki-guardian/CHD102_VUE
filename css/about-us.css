@@ -1,0 +1,281 @@
+body{
+    font-family: Inter,Noto Sans TC,Microsoft JhengHei,sans-serif,serif;
+    font-size: 16px;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.body-item1{
+    background-image: url("../pic/Mahiru-bg-mobile.png");
+}
+.body-item2{
+    background-image: url("../pic/Nanami-bg-mobile.png");
+}
+@media screen and (min-width: 768px){
+    body{
+        background-image: url("../pic/bgBlue.jpg");
+    }
+}
+main{
+    width: 100%;
+}
+@media screen and (min-width: 768px){
+    main{
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-attachment: fixed;
+        margin-top: 150px;
+        background-position-y:150px;
+    }
+}
+@media screen and (min-width: 768px){
+    .main-item1{
+        background-image: url("../pic/Mahiru-bg_full.png"), url("../pic/bgBlue.jpg");
+    }
+    .main-item2{
+        background-image: url("../pic/Nanami-bg_full.png"), url("../pic/bgBlue.jpg");
+    }
+}
+@media screen and (min-width: 1024px){
+    main{
+        background-position-y:150px;
+    }
+}
+@media screen and (min-width: 1200px){
+    main{
+        margin-top: 80px;
+        background-position-y:80px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .main-item1{
+        background-image: url("../pic/Mahiru-bg.png"), url("../pic/bgBlue.jpg");
+    }
+    .main-item2{
+        background-image: url("../pic/Nanami-bg.png"), url("../pic/bgBlue.jpg");
+    }
+}
+@media screen and (min-width: 1700px){
+    main{
+        background-size: 100%;
+    }
+}
+.about-us{
+    max-width: 1920px;
+    width: 100%;
+    margin: auto;
+}
+.container{
+    max-width: 1440px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    align-items:normal;
+}
+@media screen and (min-width: 768px){
+    .container{
+        height: 780px;
+        align-items:center;
+    }
+}
+/* 右文字區塊 */
+.Brand-Story-text{
+    display: block;
+}
+.Store-Introduction-text{
+    display: none;
+}
+.subject-text{
+    width: 70%;
+    text-align: center;
+    margin: 60px 20px;
+}
+@media screen and (min-width: 768px){
+    .subject-text{
+        margin: 100px auto;
+    }
+}
+.title{
+    font-size: 40px;
+    color: #deaa40;
+    font-weight: 900;
+    padding-bottom: 30px;
+}
+@media screen and (min-width: 768px){
+    .title{
+        padding-bottom: 60px;
+    }
+}
+.text{
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
+    text-align: justify;
+}
+.text p{
+    margin-bottom: 20px;
+}
+@media screen and (min-width: 768px){
+    .text{
+        line-height: 2;
+    }
+}
+
+/* 左選項導覽 */
+.side-item{
+    width: 15%;
+    font-size: 12px;
+    color: #fff;
+    display: grid;
+    grid-template: repeat(8,1fr)/repeat(1,1fr);
+    align-items: center;
+    justify-items: center;
+    margin: 100px 20px;
+    height: 400px;
+}
+@media screen and (min-width: 768px){
+    .side-item{
+        width: 145px;
+        font-size: 20px;
+        grid-template: repeat(9,1fr)/repeat(2,1fr);
+        justify-items: center;
+        gap: 20px 0;
+        height: auto;
+        max-height: 570px;
+    }
+}
+.side-item a{
+    color: #fff;
+}
+/* 上下箭頭 */
+.up_arrow{
+    display: none;
+    grid-area:unset;
+}
+.down_arrow{
+    display: none;
+    grid-area:unset;
+}
+@media screen and (min-width: 768px){
+    .up_arrow{
+        display: block;
+        grid-area: 1/1/2/2;
+    }
+    .down_arrow{
+        display: block;
+        grid-area: 9/1/10/2;
+    }
+}
+/* 菱形 */
+.btn_shape svg{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.btn_shape1{
+    grid-area: 1/1/2/2;
+    transform: scale(1.2);
+}
+.btn_shape2{
+    grid-area: 3/1/4/2;
+}
+.btn_shape3{
+    grid-area: 5/1/6/2;
+}
+.btn_shape4{
+    grid-area: 7/1/8/2;
+}
+@media screen and (min-width: 768px){
+    .btn_shape1{
+        grid-area: 2/1/3/2;
+    }
+    .btn_shape2{
+        grid-area: 4/1/5/2;
+    }
+    .btn_shape3{
+        grid-area: 6/1/7/2;
+    }
+    .btn_shape4{
+        grid-area: 8/1/9/2;
+    }
+}
+/* 文字按鈕 */
+.s-text{
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px){
+    .s-text{
+        margin-bottom: 0px;
+    }
+}
+.btn-Story{
+    grid-area: 2/1/3/1;
+    color: #deaa40;
+    transform: scale(1.2);
+}
+.btn-Introduction{
+    grid-area: 4/1/5/1;
+}
+.btn-Instructions{
+    grid-area: 6/1/7/1;
+}
+.btn-Service{
+    grid-area: 8/1/9/1;
+}
+@media screen and (min-width: 768px){
+    .btn-Story{
+        grid-area: 2/2/3/3;
+        color: #deaa40;
+    }
+    .btn-Introduction{
+        grid-area: 4/2/5/3;
+    }
+    .btn-Instructions{
+        grid-area: 6/2/7/3;
+    }
+    .btn-Service{
+        grid-area: 8/2/9/3;
+    }
+}
+/* 虛線 */
+.dot{
+    border-right: 6px dashed #fff;
+    width: 1px;
+    height: 50px;
+}
+.dot1{
+    display: none;
+    grid-area:unset;
+}
+.dot2{
+    display: none;
+    grid-area:unset;
+}
+.dot3{
+    display: none;
+    grid-area:unset;
+}
+@media screen and (min-width: 768px){
+    .dot1{
+        display: block;
+        grid-area: 3/1/4/2;
+    }
+    .dot2{
+        display: block;
+        grid-area: 5/1/6/2;
+    }
+    .dot3{
+        display: block;
+        grid-area: 7/1/8/2;
+    }
+}
+/* .dot4{
+    grid-area: 9/1/10/2;
+} */
+.todomain-footer{
+    margin-top: 0;
+}

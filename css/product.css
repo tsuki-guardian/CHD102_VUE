@@ -1,0 +1,149 @@
+body{
+    font-family: Inter,Noto Sans TC,Microsoft JhengHei,sans-serif,serif;
+    font-size: 16px;
+    color: #fff;
+    background-image: url("../pic/bgGoldLine.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main{
+    margin-top: 0;
+    width: 100%;
+}
+@media screen and (min-width: 768px){
+    main{
+        margin-top: 150px;
+    }
+}
+@media screen and (min-width: 1200px){
+    main{
+        margin-top: 80px;
+    }
+}
+.product{
+    max-width: 1920px;
+    margin: auto;
+}
+.product .container{
+    max-width: 1440px;
+    margin: auto;
+}
+/* ==========商品分類========== */
+.product-list{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@media screen and (min-width: 414px){
+    .product-list{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width: 768px){
+    .product-list{
+        gap:15px;
+        justify-content: start;
+    }
+}
+.product-list li a{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    height: 100%;
+}
+@media screen and (min-width: 768px){
+    .product-list li a{
+        display: block;
+    }
+}
+.product-list li a span{
+    margin-left: 0;
+}
+@media screen and (min-width: 768px){
+    .product-list li a span{
+        margin-left: 5px;
+    }
+}
+.product-list img{
+    vertical-align: middle;
+}
+.hot-title{
+    background-color: #DEAA40;
+    padding: 4px 30px 4px 10px;
+    padding-left: 30px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hot-title .main_text{
+    border-left: 4px solid #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 10px;
+}
+.hot-title .sub_text{
+    font-size: 26px;
+    font-weight: 900;
+    font-style: italic;
+    color: #fff8;
+}
+.product-large-pic{
+    padding: 20px 0;
+}
+.product-large-pic img {
+    width: 100%;
+}
+.product-small-pic{
+    justify-content: center;
+    gap: 10px 0;
+}
+.product-small-pic .sp{
+    position: relative;
+    width: 95%;
+    margin: auto;
+}
+.product-small-pic .sp a{
+    display: block;
+    font-size: 0;
+}
+.product-small-pic .sp a img{
+    width: 100%;
+    object-fit: cover;
+}
+.product-small-pic .sp::before{
+    content: "";
+    position: absolute;
+    border: 1px solid #DEAA40;
+    top: 3px;
+    left: 3px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* 禁用偽元素的滑鼠事件 */
+}
+.product-bot{
+    margin-top: 60px;
+    text-align: center;
+}
+.product-bot .get-more-btn{
+    display: inline-block;
+    /* margin: auto; */
+    font-size: 20px;
+    background-color: #deaa4033;
+    border: 1px solid #deaa40;
+    font-weight: 400;
+    color: #fff;
+    padding: 20px 40px;
+
+}
+.get-more-btn:hover{
+    background-color: #deaa40;
+    transition: .2s;
+}

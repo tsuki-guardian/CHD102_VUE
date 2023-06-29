@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="css/product-categories.css">
+    <link rel="stylesheet" href="css/col.css">
+    <!-- use google fonts "Inter & Noto Sans" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- ------------------------------------ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ------------------------------------ -->
+    <title>鋼彈模型</title>
+</head>
+
+<body>
+    <header class="todomain-header">
+        <div class="mobile-logo">
+            <a href="index.html"><img src="pic/todomain_logo_gold.svg" alt="logo"></a>
+        </div>
+        <input type="checkbox" id="menu-switch">
+        <input type="checkbox" id="search-switch">
+        <div class="header-wrap">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="pic/todomain_logo_gold.svg" alt="logo">
+                </a>
+            </div>
+            <div class="header-main">
+                <label class="hb" for="menu-switch">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <nav class="navList">
+                    <ul class="navList-content">
+                        <li>
+                            <a href="index.html"><span>Home</span>首頁</a>
+                        </li>
+                        <li>
+                            <a href="about-us.html"><span>About</span>關於我們</a>
+                        </li>
+                        <li>
+                            <a href="#"><span>News</span>最新消息</a>
+                        </li>
+                        <li>
+                            <a href="product.html"><span>Product</span>產品列表</a>
+                        </li>
+                        <li>
+                            <a href="customized-service.html"><span>Customized</span>客製化</a>
+                        </li>
+                        <li>
+                            <a href="#"><span>Contact us</span>聯絡我們</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <input class="search-bar" type="search" id="search" placeholder="搜尋商品">
+                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <label class="mobile-search" for="search-switch">
+                    <i class="fa-solid fa-magnifying-glass"></i><br>
+                    <span>搜尋商品</span>
+                </label>
+                <div class="login">
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span class="login-btn">登入/註冊</span>
+                </div>
+                <div class="shopping-cart">
+                    <i class="fa-solid fa-cart-shopping">
+                        <div class="cart-quantity"><span>0</span></div>
+                    </i>
+                    <div class="cart-word">購物車</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="product">
+            <div class="container">
+                <ul class="product-list">
+                    <li class="list-btn"><a href="product.html"><img src="pic/icon_hot.png" alt=""><span>熱門作品</span></a></li>
+                    <li class="list-btn"><a href="product-gundam.html"><img src="pic/icon_gundam_y.png" alt=""><span style="color:#DEAA40;">鋼彈模型</span></a></li>
+                    <li class="list-btn"><a href="product-figure.html"><img src="pic/icon_scale_figure.png" alt=""><span>比例模型</span></a></li>
+                    <li class="list-btn"><a href="#"><img src="pic/icon_GPX.png" alt=""><span>閃電霹靂車</span></a></li>
+                    <li class="list-btn"><a href="#"><img src="pic/icon_to_assemble.png" alt=""><span>組裝模型</span></a></li>
+                </ul>
+                <div class="hot-title">
+                    <div class="main_text">
+                        <h3>鋼彈模型</h3>
+                    </div>
+                    <div class="sub_text">
+                        <h3>GUNDAM</h3>
+                    </div>
+                </div>
+                <div class="filter">
+                    <div class="custom-select">
+                        <div class="select-trigger">
+                            <span class="selected-option">等級</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="options options-level">
+                            <div class="option">EG</div>
+                            <div class="option">HG</div>
+                            <div class="option">RG</div>
+                            <div class="option">MG</div>
+                            <div class="option">MGEX</div>
+                            <div class="option">Re100</div>
+                            <div class="option">FM</div>
+                            <div class="option">PG</div>
+                            <div class="option">PGU</div>
+                            <div class="option">MEGA SIZE</div>
+                        </div>
+                    </div>
+                    <div class="custom-select">
+                        <div class="select-trigger">
+                            <span class="selected-option">比例</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="options options-scale">
+                            <div class="option">1/144</div>
+                            <div class="option">1/100</div>
+                            <div class="option">1/48</div>
+                            <div class="option">1/60</div>
+                        </div>
+                    </div>
+                    <div class="filter-btn">
+                        篩選
+                    </div>
+                    <div class="filter-cancel">
+                        清除
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="all">所有類別</div>
+                    <div class="hot">熱銷商品</div>
+                    <div class="new">最新上架</div>
+                </div>
+                <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam01.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam02.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam03.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI 盒玩 機動戰士鋼彈 水星的魔女 MOBILE SUIT GUNDAM G-FRAME FA 風靈鋼彈 帕梅特刻痕6 套組
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam04.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI 盒玩 機動戰士鋼彈 MOBILE SUIT ENSEMBLE EX28 正義鋼彈
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam05.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI 盒玩 機動戰士鋼彈 MOBILE SUIT ENSEMBLE EX14A 自由鋼彈
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam06.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI 1/144 HG TWFM 017 烏爾魔靈鋼彈 機動戰士鋼彈 水星的魔女 組裝模型
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam02.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI 1/144 HG TWFM 018 索恩魔靈鋼彈 機動戰士鋼彈 水星的魔女 組裝模型
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam03.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam04.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam05.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam06.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam01.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam03.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam04.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam05.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam06.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam01.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="pic">
+                                <a href="#"><img src="pic/product-gundam/gundam02.png" class="product_img" alt=""></a>
+                                <div class="cart">
+                                    <img src="pic/product-gundam/shopping-cart.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="text">
+                                BANDAI ROBOT魂 ＜SIDE MS＞ RX-78GP04G 鋼彈試作4號機 卡貝拉ver. A.N.I.M.E.
+                            </div>
+                            <div class="price">
+                                <span>$ 1750</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="go-top-btn">
+            <button onclick="topFunction()" id="myBtn" title="回到首頁"><i class="fa-solid fa-angles-up"></i></button>
+        </div>
+    </main>
+    <footer class="todomain-footer">
+        <div class="footer-line">
+            <img src="pic/linear-gradient-gold.png" alt="footer-line">
+        </div>
+        <div class="footer-logo">
+            <img src="pic/todomain_logo_white.svg" alt="logo">
+        </div>
+        <div class="copy-right">
+            <p>©SOTSU・SUNRISE ©SOTSU・SUNRISE・MBS ©SOTSU・SUNRISE・TV TOKYOCopyright ©Bandai Namco Filmworks Inc. All
+                rights reserved.</p>
+            <p>＊Note:No reproduction of contents and images is allowed.</p>
+        </div>
+    </footer>
+    <script class="filter_js">
+        const selectTriggers = document.querySelectorAll('.select-trigger');
+        const options = document.querySelectorAll('.options');
+
+        selectTriggers.forEach((selectTrigger, index) => {
+            selectTrigger.addEventListener('click', () => {
+                options[index].style.display = options[index].style.display === 'none' ? 'block' : 'none';
+            });
+
+            options[index].addEventListener('click', (event) => {
+                if (event.target.classList.contains('option')) {
+                    const selectedOption = event.target.textContent;
+                    selectTrigger.querySelector('.selected-option').textContent = selectedOption;
+                    options[index].style.display = 'none';
+                }
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            const target = event.target;
+            const isSelectTrigger = target.closest('.select-trigger');
+            const isOption = target.classList.contains('option');
+
+            if (!isSelectTrigger && !isOption) {
+                options.forEach((option) => {
+                    option.style.display = 'none';
+                });
+            }
+        });
+    </script>
+        <script class="goTop">
+            // Get the button:
+            let mybutton = document.getElementById("myBtn");
+    
+            // 向下滾動20px時顯示按鈕
+            window.onscroll = function () { scrollFunction() };
+    
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+    
+            // 點擊時回到最頂部
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+</body>
+
+</html>

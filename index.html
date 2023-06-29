@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/col.css">
+    <!-- use google fonts "Inter & Noto Sans" -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- ------------------------------------ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ------------------------------------ -->
+    <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
+    <!-- ------------------------------------ -->
+    <title>TODOMain</title>
+</head>
+
+<body>
+    <header class="todomain-header">
+        <div class="mobile-logo">
+            <a href="index.html"><img src="pic/todomain_logo_gold.svg" alt="logo"></a>
+        </div>
+        <input type="checkbox" id="menu-switch">
+        <input type="checkbox" id="search-switch">
+        <div class="header-wrap">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="pic/todomain_logo_gold.svg" alt="logo">
+                </a>
+            </div>
+            <div class="header-main">
+                <label class="hb" for="menu-switch">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <nav class="navList">
+                    <ul class="navList-content">
+                        <li>
+                            <a href="index.html"><span>Home</span>首頁</a>
+                        </li>
+                        <li>
+                            <a href="about-us.html"><span>About</span>關於我們</a>
+                        </li>
+                        <li>
+                            <a href="#"><span>News</span>最新消息</a>
+                        </li>
+                        <li>
+                            <a href="product.html"><span>Product</span>產品列表</a>
+                        </li>
+                        <li>
+                            <a href="customized-service.html"><span>Customized</span>客製化</a>
+                        </li>
+                        <li>
+                            <a href="#"><span>Contact us</span>聯絡我們</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <input class="search-bar" type="search" id="search" placeholder="搜尋商品">
+                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <label class="mobile-search" for="search-switch">
+                    <i class="fa-solid fa-magnifying-glass"></i><br>
+                    <span>搜尋商品</span>
+                </label>
+                <div class="login">
+                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span class="login-btn">登入/註冊</span>
+                </div>
+                <div class="shopping-cart">
+                    <i class="fa-solid fa-cart-shopping">
+                        <div class="cart-quantity"><span>0</span></div>
+                    </i>
+                    <div class="cart-word">購物車</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner-slider">
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="pic/index-slider01.png" alt=""></div>
+                <div class="item"><img src="pic/index-slider02.png" alt=""></div>
+                <div class="item"><img src="pic/index-slider03.png" alt=""></div>
+            </div>
+        </section>
+        <section class="theme theme_gundam">
+            <div class="gd-container">
+                <img class="bg_img_lg" src="pic/freedom_bk.png" alt="freedom">
+                <img class="bg_img_md" src="pic/freedom_bk_mobile.png" alt="freedom">
+                <div class="gd-wrapper">
+                    <div class="gd-title">
+                        <h2 class="gd-title-sub">鋼彈史上最高</h2>
+                        <h2 class="gd-title-main">金屬表現</h2>
+                    </div>
+                    <div class="gd-intro">
+                        <div class="gd-intro-title">
+                            <h3>攻擊自由鋼彈 MGEX 1/00</h3>
+                        </div>
+                        <div class="gd-intro-text">
+                            <p>號稱1/100高達模型系列最高展現的MGEX系列，繼之前獨角獸高達叫好叫座之後，第二彈終於公佈！官方宣佈第二彈為人氣長年旺盛的「MGEX突擊自由高達」，並宣稱在技術力上再創「GUNPLA史上的金屬表現最高峰」。
+                            </p>
+                        </div>
+                        <a class="btn btn-highLight" href="#">商品詳情<i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="theme theme_figure">
+            <div class="fig-container" id="fixedTop">
+                <div class="fig-bg">
+                    <img src="pic/index_05-bg.png" class="makima-bg_lg" alt="">
+                    <img src="pic/index_05-bg_mobile.png" class="makima-bg_md" alt="">
+                    <div class="fig-makima">
+                        <img src="pic/makima_mask2.png" class="makima" alt="makima">
+                    </div>
+                </div>
+                <div class="fig-wrapper">
+                    <h2>支配即是我心中目標！</h2>
+                    <div class="fig-intro">
+                        <div class="fig-intro-title">
+                            <h3>eStream《鏈鋸人》真紀真 1/7比例立體人形</h3>
+                        </div>
+                        <div class="fig-intro-text">
+                            <p>日本IT集團CyberZ（株式会社CyberZ）旗下之子公司eStream所推出的高品質模型品牌「SHIBUYA SCRAMBLE
+                                FIGURE」，預定將要在2024年4月，推出人氣少年漫畫作品《鏈鋸人》中的人氣女主角「真紀真」（マキマ）的1/7比例之立體人形商品！</p>
+                        </div>
+                        <a class="btn btn-highLight" href="#">商品詳情<i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="theme popular-peripherals">
+            <div class="pp-container">
+                <div class="pp-title">
+                    <div class="pp-title-main">
+                        <h2 class="pp-title-main-l">熱門</h2>
+                        <h2 class="pp-title-main-r">周邊</h2>
+                    </div>
+                    <h2 class="pp-title-sub">Popular peripherals</h2>
+                </div>
+                <div class="pp-card-list row row-cols-2 row-cols-md-4 ">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-pic">
+                                <img src="pic/DaiwaScarlet.png" alt="DaiwaScarlet">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="card-intro">
+                                <div class="card-title">賽馬娘<span style="font-style: italic">Pretty Derby</span><br>大和赤驥
+                                </div>
+                                <div class="card-text">「大和赤驥」化身為1/7比例模型。將身穿[蒼藍巔峰]的決勝服贏得競賽的得意模樣，以威風凜凜的姿態製成模型。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-pic">
+                                <img src="pic/TwinTurbo.png" alt="TwinTurbo">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="card-intro">
+                                <div class="card-title">賽馬娘<span style="font-style: italic">Pretty Derby</span><br>雙渦輪
+                                </div>
+                                <div class="card-text">「雙渦輪」化身為1/7比例模型。將身穿決勝服，動作滿是自信的姿態製成模型。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-pic">
+                                <a href="product_info.html"><img src="pic/MihonoBourbon.png" alt="MihonoBourbon"></a>
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="card-intro">
+                                <div class="card-title">賽馬娘<span style="font-style: italic">Pretty Derby</span><br>美浦波旁
+                                </div>
+                                <div class="card-text">「美浦波旁」化身為1/7比例模型。以原創動作來表現身穿[MB-19890425]決勝服施展固有技能的形象，並製成模型。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-pic">
+                                <img src="pic/ahri.png" alt="ahri">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="card-intro">
+                                <div class="card-title">英雄聯盟<span style="font-style: italic"></span><br>星光戰士 阿璃
+                                </div>
+                                <div class="card-text">出自世界知名的電子競技遊戲《英雄聯盟》，星光戰士姿態的「阿璃」化身為比例模型登場。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pp-bg">
+                <img src="pic/bg_gradient_1.png" alt="">
+            </div>
+        </section>
+        <div class="theme imminent-deadline-product">
+            <div class="idp-container container">
+                <div class="idp-title">
+                    即將截止預購的「 商品 」！
+                </div>
+                <div class="smallCard-wrap row row-cols-2 row-cols-md-4 row-cols-lg-6">
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/miku_15th_Anniversary.png" alt="miku_15th">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">初音未來 15周年紀念</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_eren.png" alt="eren">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">進擊的巨人</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_fujioka.png" alt="fujioka">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">櫻蘭高校男公關部</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_megumin.png" alt="megumin">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">為美好的世界獻上祝福</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_sakura.png" alt="sakura">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">庫洛魔法使</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_nanachi.png" alt="nanachi">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">來自深淵</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/miku_15th_Anniversary.png" alt="miku_15th">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">初音未來 15周年紀念</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_eren.png" alt="eren">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">進擊的巨人</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_fujioka.png" alt="fujioka">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">櫻蘭高校男公關部</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_megumin.png" alt="megumin">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">為美好的世界獻上祝福</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_sakura.png" alt="sakura">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">庫洛魔法使</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_nanachi.png" alt="nanachi">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">來自深淵</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/miku_15th_Anniversary.png" alt="miku_15th">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">初音未來 15周年紀念</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_eren.png" alt="eren">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">進擊的巨人</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_fujioka.png" alt="fujioka">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">櫻蘭高校男公關部</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_megumin.png" alt="megumin">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">為美好的世界獻上祝福</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_sakura.png" alt="sakura">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">庫洛魔法使</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="smallCard">
+                            <div class="smallCard-pic card-pic">
+                                <img src="pic/sl_nanachi.png" alt="nanachi">
+                                <div class="decorateLB"></div>
+                                <div class="decorateRT"></div>
+                            </div>
+                            <div class="smallCard-title">
+                                <div class="smallCard-title-main">來自深淵</div>
+                                <div class="smallCard-title-type">玩偶</div>
+                            </div>
+                            <a href="#">
+                                <div class="smallCard-detail-btn">
+                                    商品詳情
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="go-top-btn">
+            <button onclick="topFunction()" id="myBtn" title="回到首頁"><i class="fa-solid fa-angles-up"></i></button>
+        </div>
+    </main>
+    <footer class="todomain-footer">
+        <div class="footer-line">
+            <img src="pic/linear-gradient-gold.png" alt="footer-line">
+        </div>
+        <div class="footer-logo">
+            <img src="pic/todomain_logo_white.svg" alt="logo">
+        </div>
+        <div class="copy-right">
+            <p>©SOTSU・SUNRISE ©SOTSU・SUNRISE・MBS ©SOTSU・SUNRISE・TV TOKYOCopyright ©Bandai Namco Filmworks Inc. All
+                rights reserved.</p>
+            <p>＊Note:No reproduction of contents and images is allowed.</p>
+        </div>
+    </footer>
+    <script class="goTop">
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // 向下滾動20px時顯示按鈕
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // 點擊時回到最頂部
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="owl/owl.carousel.min.js"></script>
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items: 3,
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        });
+        $('.play').on('click', function () {
+            owl.trigger('play.owl.autoplay', [1000])
+        })
+        $('.stop').on('click', function () {
+            owl.trigger('stop.owl.autoplay')
+        })
+    </script>
+    <script>
+        // 獲取視窗的寬度
+        const getWindowWidth = () => window.innerWidth;
+        // 計算 top 的值
+        const calculateTopValue = () => {
+            const windowWidth = getWindowWidth();
+            if (windowWidth < 768) {
+                return 0;
+            } else if (windowWidth > 1920) {
+                return -200;
+            } else {
+                return windowWidth * -0.104166;
+            }
+        };
+        // 更新絕對定位物件的 top 值
+        const updateTopValue = () => {
+            const element = document.getElementById('fixedTop');
+            const topValue = calculateTopValue();
+            element.style.top = topValue + 'px';
+        };
+        // 監聽視窗大小改變事件
+        window.addEventListener('resize', updateTopValue);
+        // 初始設定
+        updateTopValue();
+    </script>
+</body>
+
+</html>

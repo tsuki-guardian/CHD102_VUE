@@ -1,0 +1,341 @@
+body{
+    font-family: Inter,Noto Sans TC,Microsoft JhengHei,sans-serif,serif;
+    font-size: 16px;
+    color: #fff;
+    background-image: url("../pic/bgGoldLine.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main{
+    margin-top: 0;
+    width: 100%;
+}
+@media screen and (min-width: 768px){
+    main{
+        margin-top: 150px;
+    }
+}
+@media screen and (min-width: 1200px){
+    main{
+        margin-top: 80px;
+    }
+}
+.customized-service{
+    max-width: 1920px;
+    margin: auto;
+    padding-top: 40px;
+    overflow: hidden; /* 隱藏超出範圍的圖片 */
+}
+/* =================客製化服務標題================= */
+.cs-title{
+    text-align: center;
+}
+.cs-title-main{
+    display: inline-block;
+    font-size: 0;
+    font-weight: 900;
+}
+.cs-title-main-l{
+    display: inline-block;
+    -webkit-text-stroke: 1px #deaa40;
+    color: #000;
+    font-size: 2.75rem;
+}
+@media screen and (min-width: 768px){
+    .cs-title-main-l{
+        -webkit-text-stroke: 2px #deaa40;
+        font-size: 5rem;
+    }
+}
+.cs-title-main-r{
+    display: inline-block;
+    color: #fff;
+    border-bottom:5px solid #deaa40;
+    font-size: 2.75rem;
+    padding-bottom: 5px;
+}
+@media screen and (min-width: 768px){
+    .cs-title-main-r{
+        border-bottom:3px solid #deaa40;
+        font-size: 5rem;
+        padding-bottom: 5px;
+    }
+}
+.cs-title-sub{
+    font-size: 1.125rem;
+    color: #fff;
+    font-style: italic;
+    padding: 5px 0 40px;
+}
+@media screen and (min-width: 768px){
+    .cs-title-sub{
+        font-size: 1.875rem;
+        padding: 5px 0 50px;
+    }
+}
+/* =================無限輪播================= */
+.slider-wrap{
+    display: flex;
+    gap: 5px;
+    animation: slideAnimation 50s linear infinite; 
+}
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1050px);
+    }
+}
+@media screen and (min-width: 768px){
+    @keyframes slideAnimation {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-2020px);
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    .slider-wrap{
+        gap: 10px;
+    }
+}
+.slider-pic {
+    width:100px;
+    flex-shrink: 0;
+}
+@media screen and (min-width: 768px){
+    .slider-pic {
+        width: unset;
+    }
+}
+.slider-pic img{
+    width: 100%;
+}
+/* =================container================= */
+.customized-service .container{
+    max-width: 1440px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+}
+.intro-title{
+    font-size: 40px;
+    font-weight: 900;
+    color: #deaa40;
+    margin-bottom: 60px;
+}
+@media screen and (min-width: 768px){
+    .intro-title{
+        margin-bottom: 100px;
+    }
+}
+/* =================technical================= */
+.technical-intro,
+.machine-intro{
+    position: relative;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+@media screen and (min-width: 768px){
+    .technical-intro,
+    .machine-intro{
+        flex-direction: row;
+        margin-bottom: 360px;
+    }
+}
+@media screen and (min-width: 1024px){
+    .technical-intro,
+    .machine-intro{
+        margin: 0 0 140px;
+    }
+}
+@media screen and (min-width: 768px){
+    .machine-intro{
+        flex-direction: row-reverse;
+    }
+}
+.text-wrap{
+    margin: 20px;
+    line-height: 1.5;
+}
+@media screen and (min-width: 768px){
+    .text-wrap{
+        width: 100%;
+        line-height: 2;
+    }
+}
+@media screen and (min-width: 1024px){
+    .text-wrap{
+        width: auto;
+        margin: 0;
+    }
+}
+/* 上文 */
+.intro-text{
+    color: #deaa40;
+    padding: 0;
+    text-align: justify;
+}
+@media screen and (min-width: 1024px){
+    .it-r{
+        padding-top: 20px;
+        padding-right: 60px;
+    }
+    .it-l{
+        padding-top: 20px;
+        padding-left: 60px;
+        padding-right: 20px;
+    } 
+}
+@media screen and (min-width: 1200px){
+    .it-r{
+        padding-top: 20px;
+        padding-right: 160px;
+    }
+    .it-l{
+        padding-top: 20px;
+        padding-left: 60px;
+        padding-right: 100px;
+    } 
+}
+/* 下文 */
+.content-text{
+    margin: 0;
+}
+@media screen and (min-width: 768px){
+    .content-text{
+        position: absolute;
+        margin: 20px;
+    }
+}
+@media screen and (min-width: 1024px){
+    .content-text{
+        position: static;
+        margin: 100px 0 0;
+        z-index: 1;
+    }
+}
+.ct-r{
+    left: 0;
+}
+.ct-l{
+    right: 0;
+}
+@media screen and (min-width: 768px){
+    .ct-r{
+        top: 100%;
+        left: 0;
+    }
+    .ct-l{
+        top: 100%;
+        right: 0;
+    }
+}
+@media screen and (min-width: 1024px){
+    .ct-r{
+        position: relative;
+        top: unset;
+        left: -60px;
+    }
+    .ct-l{
+        position: relative;
+        top: unset;
+        right: -60px;
+    }
+}
+.content-text p{
+    margin-top: 20px;
+}
+.intro-pic{
+    margin: 20px;
+}
+@media screen and (min-width: 768px){
+    .intro-pic{
+        width: auto;
+        position: relative;
+    }
+}
+@media screen and (min-width: 1024px){
+    .intro-pic{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1920px){
+    .intro-pic{
+        margin: 0;
+    }
+}
+.intro-pic img{
+    width: 100%;
+}
+@media screen and (min-width: 1440px){
+    .intro-pic img{
+        width: auto;
+    }
+}
+.pic-l{
+    left: 0;
+}
+.pic-r{
+    right: 0;
+}
+@media screen and (min-width: 1024px){
+}
+@media screen and (min-width: 1540px){
+    .pic-l{
+        left: -50px;
+    }
+    .pic-r{
+        right: -50px;
+    }
+}
+.text-bg{
+    display: none;
+}
+@media screen and (min-width: 1024px){
+    .text-bg{
+        display: block;
+        position: absolute;
+        bottom: -60px;
+        width: 90%;
+        max-width: 1124px;
+    }
+}
+.text-bg img{
+    width: 100%;
+}
+.bg-r{
+    text-align: end;
+    right: -50px;
+}
+.bg-l{
+    transform: scaleX(-1);
+    text-align: start;
+    left: -50px;
+}
+/* =================btn================= */
+.now-customization-btn{
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #deaa4033;
+    padding: 30px 70px;
+    border: 1px solid #deaa40;
+    box-sizing: border-box;
+    user-select: none;
+}
+.now-customization-btn p{
+    display: inline;
+    padding: 0 10px;
+}
+.now-customization-btn:hover{
+    background-color: #deaa40;
+    transition: .5s;
+}

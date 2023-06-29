@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雞蛋王國</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Noto+Sans+JP:wght@100;200;300;400&display=swap" rel="stylesheet">
+    <!-- ---RWD viewport設定--- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ---------------------- -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="app">
+    <div class="gotop_btn" @click="scrollToTop">
+        <img src="pic/go_top.svg" alt="往上到最頂端">
+    </div>
+
+
+    <!-- 手機版漢堡 --------------> 
+    <div class="menubox">
+        <input type="checkbox" id="switch">
+        <label class="menu_button" for="switch">
+            <div class="switch"></div>
+            <span class="menu">MENU</span>
+            <span class="close">CLOSE</span>
+        </label>
+
+        <div class="nav_open">
+            <div class="nav_inner">
+                <ul class="nav_link" v-for="item in [home, ...menu, contact]" :key="item.index">
+                    <a :href="item.link">
+                        <i class="fa-solid fa-circle-chevron-right"></i> 
+                        <li class="nav_items">{{item.name_tw}}</li>
+                        <li class="nav_items_en">{{item.name_en}}</li>
+                    </a>    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+  
+
+    <div class="header">
+        <div class="search_wrap">
+            <div class="search_inner">
+                <div class="search_btn">
+                    <div class="search">
+                    <i class="fas fa-search"></i>
+                    </div>
+                    <input class="search_bar" v-model="searchText">
+                </div>
+                <div class="shopping_cart">
+                    <a href="">
+                        <i class="fa-solid fa-cart-shopping"></i> 
+                    </a>                 
+                </div>
+            </div>            
+        </div>
+        <div class="header_inner">
+            <div class="header_logo">
+                <a :href="home.link">
+                    <img :src="siteInfo.logSrc" alt="logo_red">
+                </a>
+            </div>
+            <nav class="header_nav">
+                <ul class="nav_link" v-for="item in [...menu]" :key="item.index">
+                    <a :href="item.link">
+                        <li class="nav_items">{{item.name_tw}}</li>
+                        <li class="nav_items_en">{{item.name_en}}</li> 
+                    </a>                      
+                </ul>
+            </nav>
+
+            <div class="contact_icon">
+                <div class="email">
+                    <a :href="contact.email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="fbig">
+                    <div v-for="item in social" :key="item.index" :class="item.index">
+                        <a :href="item.link">
+                        <i class="fa-brands" :class="item.icon"></i> 
+                        </a>              
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <div class="slogan">
+            <p>愛的滋味</p>
+            <p>讓鷄蛋更美味</p>
+        </div>
+        <div class="wave">
+            <img src="pic/wave.png" alt="wave">
+        </div> 
+    </div>
+
+
+    <div class="eggshape"> 
+        <!-- 手機版logo -------------->
+        <div class="logo_red_mobile">
+            <a :href="contact.home">
+                <img :src="siteInfo.logMobileSrc" :alt="siteInfo.name">
+            </a>
+        </div>
+        <!--------------------------->
+        <div class="pic_wrap">
+            <div class="eggshape_pic">
+                <img src="pic/eggshape.png" alt="eggshape"> 
+            </div>
+            <div class="chick"></div>
+        </div>
+        <div class="title">
+            <h1>用<span class="love">愛</span>傳遞毎一分健康。</h1>
+            <h1>用心<span class="guard">守護</span>毎一顆蛋</h1>
+            <p class="en">GLOW UP IN LOVE ......</p> 
+        </div>  
+    </div>
+
+
+    <div class="family">
+        <div class="txt">
+            <h1 v-html="siteInfo.section1.title1+siteInfo.section1.title2"></h1>
+            <p>{{ siteInfo.section1.desc1 + siteInfo.section1.desc2 }}</p>
+        </div>
+        <div class="pic">
+            <img :src="siteInfo.section1.img" alt="family">
+        </div>
+    </div>
+
+
+<!---------- 手機版 ----------->
+    <div class="family_mobile">
+        <div class="eggshape_pic">
+            <img src="pic/eggshape.png" alt="eggshape"> 
+        </div>
+        <div class="txt">
+            <div class="title">
+                <h1>{{siteInfo.section1.title1}}</h1>
+                <h1 v-html="siteInfo.section1.title2"></h1>
+            </div>
+            <p>{{siteInfo.section1.desc1}}</p>
+            <p>{{siteInfo.section1.desc2}}</p>
+        </div>
+        <div class="pic">
+            <img :src="siteInfo.section1.img" alt="family">
+        </div>
+    </div>
+
+
+<!---------- 手機版 ----------->
+    <div class="free_range_eggs_mobile">
+        <div class="pic_mobile">
+            <img class="hen" :src="siteInfo.section2.img" alt="picture">
+        </div>
+        <div class="title_mobile">
+            <h1 class="eggs">{{siteInfo.section2.title1}}</h1>
+            <h1>{{siteInfo.section2.title2}}</h1>
+            <p>{{siteInfo.section2.desc1}}</p>          
+        </div>
+    </div>
+
+
+<!---------- 黃色背景 手機版 ----------->
+    <div class="wave_yellow_mobile"></div>
+    <div class="yellow_bgc">
+        <div class="pic_wrap">
+            <figure class="pic">
+                <img class="chick" src="pic/chick.png" alt="小雞圖">  
+            </figure>
+            <div class="dialog"></div>
+        </div>
+        <div class="paragraph">
+            <p>{{siteInfo.section2.desc2}}</p>
+        </div>
+    </div>
+
+
+<!---------- 黃色背景 桌機版 ----------->
+    <div class="wave_yellow"></div>
+    <div class="yellow_bgc_desktop">
+        <div class="free_range_eggs">
+            <div class="pic">
+                <img class="hen" :src="siteInfo.section2.img" alt="picture">
+                <img class="chick" src="pic/chick.png" alt="picture"> 
+                <img class="eggs" src="pic/eggs.png" alt="picture">
+            </div>
+            <div class="title">
+                <h1 class="eggs">{{siteInfo.section2.title1}}</h1>
+                <h1>{{siteInfo.section2.title2}}</h1>       
+            </div>      
+        </div>
+        <div class="paragraph">
+            <div class="txt">
+                <p>{{siteInfo.section2.desc1}}</p>
+                <p>{{siteInfo.section2.desc2}}</p>
+                <p>{{siteInfo.section2.desc3}}</p>
+            </div>
+            <div class="pic">
+                <img class="dialog" src="pic/dialog.svg" alt="picture">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="eggseries_carousel">
+        <div class="title">
+            <h1>EGG SERIES</h1>
+            <img src="pic/decorative_line.svg" alt="裝飾線">
+        </div>
+        
+        <div class="eggseries_cards">
+            <div class="prd_card" v-for="(item, index) in products" :key="index">
+                <div class="pic">
+                    <img :src="item.img" :alt="item.name_tw"> 
+                </div>
+                <div class="prdwrap">
+                    <div class="txt">
+                        <div class="prd">
+                            <h2>{{item.name_tw}}</h2>
+                            <span>({{parseUnit(item.unit)}})</span>
+                        </div>
+                        <span class="assortment">{{item.name_en}}</span> 
+                    </div>
+                    <div class="click_more">
+                        <a href="">
+                            <i class="fa-solid fa-circle-right fa-beat"></i>
+                        </a>
+                    </div>
+                </div>     
+            </div>
+        </div>
+    </div>
+    <div class="carousel_wrap">
+        <ul class="pic_carousel_first">
+            <li class="pic" v-for="item in 4" :key="item">
+                <img :src="`pic/pic_carousel_${item}.jpg`" alt="輪播照片">
+            </li>
+        </ul>
+        <ul class="pic_carousel_second">
+            <li class="pic" v-for="item in 4" :key="item">
+                <img :src="`pic/pic_carousel_${item}.jpg`" alt="輪播照片">
+            </li>
+        </ul>
+    </div>
+    
+
+    <div class="footer_wrap">
+        <div class="footer">
+            <div class="footer_inner">
+                <div class="footer_logo">
+                    <a :href="home.link">
+                        <img :src="siteInfo.logSrc" :alt="siteInfo.name">
+                    </a>              
+                </div>   
+                <div class="footer_info">
+                    <ul class="link_btn">
+                        <li class="contact_link">
+                            <a href="">
+                                <i class="fa-solid fa-circle-right"></i> 
+                            </a> 
+                            <a :href="contact.link">{{contact.name_tw}}</a>   
+                        </li>                              
+                        <li class="map_link">
+                            <a href="">
+                                <i class="fa-solid fa-circle-right"></i> 
+                            </a>
+                            <a href="#">{{contact.addr}}</a>   
+                        </li>
+                    </ul>
+                    <nav class="footer_nav">
+                        <ul class="nav_link" v-for="item in menu" :key="item.index">
+                            <a :href="item.link">
+                                <li class="nav_items">{{item.name_tw}}</li>
+                                <li :class="item.footer_class">{{item.name_en}}</li> 
+                            </a>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="fbig">
+                    <div v-for="item in social" :key="item.index" :class="item.index">
+                        <a :href="item.link">
+                            <i class="fa-brands" :class="item.icon"></i> 
+                        </a>              
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>本網站為緯育TibaMe前端工程師班CHD102班學員專題作品，本平台僅供學習、展示之用。參考資源: 伊東養鶏場、Tamarando</p>
+            </div>
+        </div>
+        <div class="footer_bgc"></div>
+    </div>
+</div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    home: {
+                        index: 'home',
+                        link: '../index.html',
+                        name_tw: '首頁',
+                        name_en: 'HOME'
+                    },
+                    siteInfo: {
+                        name: '雞蛋王國',
+                        logSrc: 'pic/logo_red.svg',
+                        logMobileSrc: 'pic/logo_red_mobile.svg',
+                        section1: {
+                            img: 'pic/family.svg',
+                            title1: '追尋純淨：',
+                            title2: '放牧鷄蛋的<span class="nature">天然</span>旅程',
+                            desc1: '我們相信真正的美味來自於自然的滋味。因此，我們成立了一個團隊，致力於放牧雞蛋的生產，希望為您呈現最純粹的味道，讓我們一同享受這份來自大自然的禮物，並將它們化作您美食的一部分。',
+                            desc2: '每一口都是對大自然的敬意，也是對生命的珍愛。我們相信當您品味到放牧雞蛋的美味時，您也會感受到這份獨特的味道所蘊含的溫暖與喜悅。放牧雞蛋的美味時，您也會感受到這份獨特的味道所蘊含的溫暖與喜悅。'
+                        },
+                        section2: {
+                            img: 'pic/hen_on_lawn.png',
+                            title1: '放牧鷄蛋',
+                            title2: '真正看得到、吃得到',
+                            desc1: '在雞蛋王國，我們有著一個獨特的願景，希望改變台灣雞隻飼養方式，我們決心用放牧飼養來取代傳統的格子籠和平面飼養，讓每一位母雞都能發聲。',
+                            desc2: '我們與創辦人以及眾多企業家攜手合作，堅持不使用針劑、藥物或強迫的飼養過程，創造出一個能讓每位顧客以實惠的價格品嚐到放牧飼養雞蛋的方式。我們的目標是建立一個人與動物健康快樂的經濟循環，並以獨立企業的形式推動放牧飼養，結合群眾養雞的力量，共同創造永續經營的未來。',
+                            desc3: '在雞蛋王國，我們以創新和熱情，開創出一個全新的雞蛋時代，一個注重品質和永續的未來。'
+                        }
+                    },
+                    menu: [
+                        {
+                            index: 'about',
+                            link: '../aboutus/aboutus.html',
+                            name_tw: '關於我們',
+                            name_en: 'ABOUT US',
+                            footer_class: "about"
+                        },
+                        {
+                            index: 'product',
+                            link: '../eggs/eggs.html',
+                            name_tw: '精選商品',
+                            name_en: 'EGGS',
+                            footer_class: "nav_items_en"
+                        },
+                        {
+                            index: 'reports',
+                            link: '',
+                            name_tw: '檢驗報告',
+                            name_en: 'REPORTS',
+                            footer_class: "reports"
+                        },
+                        {
+                            index: 'store',
+                            link: '',
+                            name_tw: '通路門市',
+                            name_en: 'STORE',
+                            footer_class: "nav_items_en"
+                        },
+                        {
+                            index: 'news',
+                            link: '../news/news.html',
+                            name_tw: '最新消息',
+                            name_en: 'NEWS',
+                            footer_class: "nav_items_en"
+                        }
+                    ],
+                    contact: {
+                        //拼錯字囉
+                        index: 'aboutus',
+                        link: '../aboutus/aboutus.html',
+                        name_tw: '聯絡我們',
+                        name_en: 'CONTACT US',
+                        footer_class: "nav_items_en",
+                        email: '',
+                        addr: '320桃園市中壢區復興路46號9樓'
+                    },
+                    social: [
+                        {
+                            index: 'fb',
+                            link: '',
+                            icon: 'fa-facebook-f'
+                        },
+                        {
+                            index: 'ig',
+                            link: '',
+                            icon: 'fa-instagram'
+                        }
+                    ],
+                    unit: ['3盒入', '6入/10入'],
+                    products: [
+                        {
+                            name_tw: '頂級田園好蛋組合',
+                            name_en: 'EGG SET',
+                            unit: 0,
+                            img: 'pic/egg_set.jpg'
+                        },
+                        {
+                            name_tw: '幸福好蛋',
+                            name_en: 'HAPPINESS EGGS',
+                            unit: 1,
+                            img: 'pic/happiness_eggs.jpg'
+                        },
+                        {
+                            name_tw: '田園好蛋',
+                            name_en: 'HEALTHY EGGS',
+                            unit: 1,
+                            img: 'pic/healthy_eggs.jpg'
+                        },
+                        {
+                            name_tw: '悠活好蛋',
+                            name_en: 'LEISURELY EGGS',
+                            unit: 1,
+                            img: 'pic/leisurely_eggs.jpg'
+                        },
+                        {
+                            name_tw: '頂級好蛋',
+                            name_en: 'SUPER EGGS',
+                            unit: 1,
+                            img: 'pic/super_eggs.jpg'
+                        },
+                        {
+                            name_tw: '頂呱呱好蛋三重奏',
+                            name_en: 'EGG SET',
+                            unit: 0,
+                            img: 'pic/egg_set.jpg'
+                        }
+                    ],
+                    searchText: ''
+                }
+            },
+            //下週會說methods
+            methods: {
+                scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                },
+                parseUnit(unitValue){
+                    return this.unit[unitValue]
+                }
+            },
+        }).mount('#app')
+    </script>
+</body>
+</html>
