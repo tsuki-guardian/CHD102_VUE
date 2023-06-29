@@ -17,6 +17,8 @@
     <title>關於我們</title>
 </head>
 <body class="body-item1">
+    <div id="app">
+
     <header class="todomain-header">
         <div class="mobile-logo">
             <a href="index.html"><img src="pic/todomain_logo_gold.svg" alt="logo"></a>
@@ -79,6 +81,9 @@
             </div>
         </div>
     </header>
+
+    <!-- 要 Vue 的地方 -->
+
     <main class="main-item1">
         <section class="about-us">
             <div class="container">
@@ -98,28 +103,28 @@
                             <rect x="20.144" y="9.35205" width="15.2623" height="15.2623" transform="rotate(45 20.144 9.35205)" fill="black"/>
                         </svg>
                     </div>
-                    <div class="btn-Story s-text">品牌故事</div>
+                    <div class="btn-Story s-text">{{side_item.story}}</div>
                     <div class="btn_shape2 btn_shape">
                         <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect class="rhombus-color" x="20.5" width="28.9914" height="28.9914" transform="rotate(45 20.5 0)" fill="#FFFFFF"/>
                             <rect x="20.144" y="9.35205" width="15.2623" height="15.2623" transform="rotate(45 20.144 9.35205)" fill="black"/>
                         </svg>
                     </div>
-                    <div class="btn-Introduction s-text">商店簡介</div>
+                    <div class="btn-Introduction s-text">{{side_item.introduction}}</div>
                     <div class="btn_shape3 btn_shape">
                         <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect class="rhombus-color" x="20.5" width="28.9914" height="28.9914" transform="rotate(45 20.5 0)" fill="#FFFFFF"/>
                             <rect x="20.144" y="9.35205" width="15.2623" height="15.2623" transform="rotate(45 20.144 9.35205)" fill="black"/>
                         </svg>
                     </div>
-                    <div class="btn-Instructions s-text">購物說明</div>
+                    <div class="btn-Instructions s-text">{{side_item.instructions}}</div>
                     <div class="btn_shape4 btn_shape">
                         <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect class="rhombus-color" x="20.5" width="28.9914" height="28.9914" transform="rotate(45 20.5 0)" fill="#FFFFFF"/>
                             <rect x="20.144" y="9.35205" width="15.2623" height="15.2623" transform="rotate(45 20.144 9.35205)" fill="black"/>
                         </svg>
                     </div>
-                    <div class="btn-Service s-text">商店客服</div>
+                    <div class="btn-Service s-text">{{side_item.service}}</div>
                     <div class="down_arrow">
                         <svg width="54" height="61" viewBox="0 0 54 61" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M24.5 61V51.5L10.5 37H0L24.5 61Z" fill="white"/>
@@ -163,6 +168,9 @@
             </div>
         </section>
     </main>
+
+    <!-- 到這 -->
+
     <footer class="todomain-footer">
         <div class="footer-line">
             <img src="pic/linear-gradient-gold.png" alt="footer-line">
@@ -175,9 +183,133 @@
             <p>＊Note:No reproduction of contents and images is allowed.</p>
         </div>
     </footer>
+    </div>
+
     <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
-$(document).ready(function() {
+        Vue.createApp({
+            data() {
+                return {
+
+                    side_item : {
+                        story:"品牌故事",
+                        introduction:"商店簡介",
+                        instructions:"購物說明",
+                        service:"商店客服"
+                    }
+
+                    // logo: {
+                    //     gold: "pic/todomain_logo_gold.svg",
+                    //     white: "pic/todomain_logo_white.svg"
+                    // },
+
+                    // home: {
+                    //     index: "home",
+                    //     link: "index.html",
+                    //     name_tw: "首頁",
+                    //     name_en: "Home"
+                    // },
+
+                    // about: {
+                    //     index: "about-us",
+                    //     link: "about-us.html",
+                    //     name_tw: "關於我們",
+                    //     name_en: "About"
+                    // },
+
+                    // news: {
+                    //     index: "news",
+                    //     link: "#",
+                    //     name_tw: "最新消息",
+                    //     name_en: "News"
+                    // },
+
+                    // product: {
+                    //     index: "product",
+                    //     link: "product.html",
+                    //     name_tw: "產品列表",
+                    //     name_en: "Product"
+                    // },
+
+                    // customized: {
+                    //     index: "customized",
+                    //     link: "#",
+                    //     name_tw: "客製化",
+                    //     name_en: "Customized"
+                    // },
+
+                    // contactUs: {
+                    //     index: "contactUs",
+                    //     link: "#",
+                    //     name_tw: "聯絡我們",
+                    //     name_en: "Contact us"
+                    // },
+
+                    // productLargePic: {
+                    //     img: "pic/product-card/fate.png"
+                    // },
+
+                    // smallCard: [
+                    //     {img: "pic/product-card/hl.png"},
+                    //     {img: "pic/product-card/jk.png"},
+                    //     {img: "pic/product-card/ds.png"},
+                    //     {img: "pic/product-card/tr.png"},
+                    //     {img: "pic/product-card/mhr.png"},
+                    //     {img: "pic/product-card/kc.png"},
+                    //     {img: "pic/product-card/fgo.png"},
+                    //     {img: "pic/product-card/ss.png"},
+                    //     {img: "pic/product-card/mo.png"},
+                    //     {img: "pic/product-card/bb.png"},
+                    //     {img: "pic/product-card/od.png"},
+                    //     {img: "pic/product-card/ks.png"},
+                    //     {img: "pic/product-card/mc.png"},
+                    //     {img: "pic/product-card/hm.png"},
+                    //     {img: "pic/product-card/tf.png"},
+                    //     {img: "pic/product-card/um.png"},
+                    //     {img: "pic/product-card/gbf.png"},
+                    //     {img: "pic/product-card/hk.png"},
+                    //     {img: "pic/product-card/pc.png"},
+                    //     {img: "pic/product-card/im.png"}
+                    // ],
+
+                    // productList: [
+                    //     {
+                    //         link: "product.html",
+                    //         img: "pic/icon_hot_y.png",
+                    //         style: "color: #DEAA40;",
+                    //         name_tw: "熱門作品"
+                    //     },
+                    //     {
+                    //         link: "product-gundam.html",
+                    //         img: "pic/icon_gundam.png",
+                    //         name_tw: "鋼彈模型"
+                    //     },
+                    //     {
+                    //         link: "product-figure.html",
+                    //         img: "pic/icon_scale_figure.png",
+                    //         name_tw: "比例模型"
+                    //     },
+                    //     {
+                    //         link: "#",
+                    //         img: "pic/icon_GPX.png",
+                    //         name_tw: "閃電霹靂車"
+                    //     },
+                    //     {
+                    //         link: "#",
+                    //         img: "pic/icon_to_assemble.png",
+                    //         name_tw: "組裝模型"
+                    //     }
+                    // ],
+
+                    // searchText:""
+                }
+            }
+        }).mount('#app')
+        
+    </script>
+    <script>
+    $(document).ready(function() {
   $('.btn_shape1, .btn-Story').click(function() {
     // 替換class
     $('body').attr('class', 'body-item1');
