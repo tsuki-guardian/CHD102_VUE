@@ -1,351 +1,508 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/header_footer.css">
-    <link rel="stylesheet" href="css/about-us.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header_footer.css" />
+    <link rel="stylesheet" href="css/about-us.css" />
     <!-- use google fonts "Inter & Noto Sans" -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+TC:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- ------------------------------------ -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- ------------------------------------ -->
     <title>關於我們</title>
-</head>
-<body class="body-item1">
+  </head>
+  <body class="body-item1">
     <div id="app">
-
-    <header class="todomain-header">
+      <header class="todomain-header">
         <div class="mobile-logo">
-            <a href="index.html"><img src="pic/todomain_logo_gold.svg" alt="logo"></a>
+          <a href="index.html"
+            ><img src="pic/todomain_logo_gold.svg" alt="logo"
+          /></a>
         </div>
-        <input type="checkbox" id="menu-switch">
-        <input type="checkbox" id="search-switch">
+        <input type="checkbox" id="menu-switch" />
+        <input type="checkbox" id="search-switch" />
         <div class="header-wrap">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="pic/todomain_logo_gold.svg" alt="logo">
-                </a>
+          <div class="logo">
+            <a href="index.html">
+              <img src="pic/todomain_logo_gold.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="header-main">
+            <label class="hb" for="menu-switch">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <nav class="navList">
+              <ul class="navList-content">
+                <li>
+                  <a href="index.html"><span>Home</span>首頁</a>
+                </li>
+                <li>
+                  <a href="about-us.html"><span>About</span>關於我們</a>
+                </li>
+                <li>
+                  <a href="#"><span>News</span>最新消息</a>
+                </li>
+                <li>
+                  <a href="product.html"><span>Product</span>產品列表</a>
+                </li>
+                <li>
+                  <a href="customized-service.html"
+                    ><span>Customized</span>客製化</a
+                  >
+                </li>
+                <li>
+                  <a href="#"><span>Contact us</span>聯絡我們</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="search">
+              <input
+                class="search-bar"
+                type="search"
+                id="search"
+                placeholder="搜尋商品"
+              />
+              <button class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
             </div>
-            <div class="header-main">
-                <label class="hb" for="menu-switch">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-                <nav class="navList">
-                    <ul class="navList-content">
-                        <li>
-                            <a href="index.html"><span>Home</span>首頁</a>
-                        </li>
-                        <li>
-                            <a href="about-us.html"><span>About</span>關於我們</a>
-                        </li>
-                        <li>
-                            <a href="#"><span>News</span>最新消息</a>
-                        </li>
-                        <li>
-                            <a href="product.html"><span>Product</span>產品列表</a>
-                        </li>
-                        <li>
-                            <a href="customized-service.html"><span>Customized</span>客製化</a>
-                        </li>
-                        <li>
-                            <a href="#"><span>Contact us</span>聯絡我們</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="search">
-                    <input class="search-bar" type="search" id="search" placeholder="搜尋商品">
-                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-                <label class="mobile-search" for="search-switch">
-                    <i class="fa-solid fa-magnifying-glass"></i><br>
-                    <span>搜尋商品</span>
-                </label>
-                <div class="login">
-                    <i class="fa-solid fa-user"></i>
-                    <i class="fa-solid fa-circle-user"></i>
-                    <span class="login-btn">登入/註冊</span>
-                </div>
-                <div class="shopping-cart">
-                    <i class="fa-solid fa-cart-shopping">
-                        <div class="cart-quantity"><span>0</span></div>
-                    </i>
-                    <div class="cart-word">購物車</div>
-                </div>
+            <label class="mobile-search" for="search-switch">
+              <i class="fa-solid fa-magnifying-glass"></i><br />
+              <span>搜尋商品</span>
+            </label>
+            <div class="login">
+              <i class="fa-solid fa-user"></i>
+              <i class="fa-solid fa-circle-user"></i>
+              <span class="login-btn">登入/註冊</span>
             </div>
+            <div class="shopping-cart">
+              <i class="fa-solid fa-cart-shopping">
+                <div class="cart-quantity"><span>0</span></div>
+              </i>
+              <div class="cart-word">購物車</div>
+            </div>
+          </div>
         </div>
-    </header>
+      </header>
 
-    <!-- 要 Vue 的地方 -->
+      <!-- 要 Vue 的地方 -->
 
-    <main class="main-item1">
+      <main class="main-item1">
         <section class="about-us">
-            <div class="container">
-                <div class="side-item">
-                    <div class="up_arrow">
-                        <svg width="54" height="61" viewBox="0 0 54 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M24.5 0V9.5L10.5 24H0L24.5 0Z" fill="white"/>
-                            <path d="M29.5 0V9.5L43.2143 24H53.5L29.5 0Z" fill="white"/>
-                            <path d="M27 12L37.8253 24H16.1747L27 12Z" fill="white"/>
-                            <circle cx="27.5" cy="39" r="5" fill="white"/>
-                            <circle cx="27.5" cy="56" r="5" fill="white"/>
-                        </svg>
-                    </div> 
-                    <div class="btn_shape1 btn_shape">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="rhombus-color" x="20.5" width="28.9914" height="28.9914" transform="rotate(45 20.5 0)" fill="#DEAA40"/>
-                            <rect x="20.144" y="9.35205" width="15.2623" height="15.2623" transform="rotate(45 20.144 9.35205)" fill="black"/>
-                        </svg>
-                    </div>
-                    <div class="btn-Story s-text">{{side_item.story}}</div>
-                    <div class="btn_shape2 btn_shape">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="rhombus-color" x="20.5" width="28.9914" height="28.9914" transform="rotate(45 20.5 0)" fill="#FFFFFF"/>
-                            <rect x="20.144" y="9.35205" width="15.2623" height="15.2623" transform="rotate(45 20.144 9.35205)" fill="black"/>
-                        </svg>
-                    </div>
-                    <div class="btn-Introduction s-text">{{side_item.introduction}}</div>
-                    <div class="btn_shape3 btn_shape">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="rhombus-color" x="20.5" width="28.9914" height="28.9914" transform="rotate(45 20.5 0)" fill="#FFFFFF"/>
-                            <rect x="20.144" y="9.35205" width="15.2623" height="15.2623" transform="rotate(45 20.144 9.35205)" fill="black"/>
-                        </svg>
-                    </div>
-                    <div class="btn-Instructions s-text">{{side_item.instructions}}</div>
-                    <div class="btn_shape4 btn_shape">
-                        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="rhombus-color" x="20.5" width="28.9914" height="28.9914" transform="rotate(45 20.5 0)" fill="#FFFFFF"/>
-                            <rect x="20.144" y="9.35205" width="15.2623" height="15.2623" transform="rotate(45 20.144 9.35205)" fill="black"/>
-                        </svg>
-                    </div>
-                    <div class="btn-Service s-text">{{side_item.service}}</div>
-                    <div class="down_arrow">
-                        <svg width="54" height="61" viewBox="0 0 54 61" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M24.5 61V51.5L10.5 37H0L24.5 61Z" fill="white"/>
-                            <path d="M29.5 61V51.5L43.2143 37H53.5L29.5 61Z" fill="white"/>
-                            <path d="M27 49L37.8253 37H16.1747L27 49Z" fill="white"/>
-                            <circle cx="5" cy="5" r="5" transform="matrix(1 0 0 -1 22.5 27)" fill="white"/>
-                            <circle cx="5" cy="5" r="5" transform="matrix(1 0 0 -1 22.5 10)" fill="white"/>
-                        </svg>
-                    </div>
-                    <div class="dot dot1"></div>
-                    <div class="dot dot2"></div>
-                    <div class="dot dot3"></div>
-                    <!-- <div class="dot dot4"></div> -->
-                </div>
-                <div class="Brand-Story-text subject-text">
-                    <div class="title">
-                        <h2>品牌故事</h2>
-                    </div>
-                    <div class="text">
-                        <p>"To Do Main. enjoy hobby"的品牌理念是讓消費者在日常生活中享受組裝模型的樂趣。品牌以Toys當發想，結合To Do List表示去實行小時候未完成的夢想，Main代表著這些興趣是可以伴隨您生活的主要興趣。</p>
-                        <p>我們想傳達的是藉由我們讓消費者在繁忙的生活中培養自己的興趣，並找回赤子之心。興趣及收藏，是您生活不可或缺的一部分，我們是伴隨您完成心願的主要夥伴。</p>
-                        <p>"To Do Main. enjoy hobby" 品牌將陪伴您踏上您的夢想之旅，為您提供源源不斷的創意和樂趣，讓您的生活更加豐富多彩。讓我們一起探索、創造和享受模型與玩具的無限可能性吧！</p>
-                    </div>
-                </div>
-                <div class="Store-Introduction-text subject-text">
-                    <div class="title">
-                        <h2>商店簡介</h2>
-                    </div>
-                    <div class="text">
-                        <p>歡迎光臨"To Do Main. enjoy hobby"！</p>
-                        <p>我們是一家以模型及玩具為主打的店家，專注於為消費者提供組裝模型的樂趣。無論您是模型愛好者、收藏家，還是單純喜愛手作的人，我們都是您的理想選擇。</p>
-                        <p>我們相信每個人都應該擁有一個屬於自己的興趣世界。因此，我們精心挑選並提供各種主題和風格的模型與玩具，以滿足您的喜好和收藏需求。不論您是追求歷史、科幻、汽車或建築等領域的愛好者，我們店內的豐富產品系列都能讓您找到心儀之作。
-                        </p>
-                        <p>除了商品本身，我們店內也提供豐富的資源和支援，以協助您更好地享受模型製作的過程。無論您是初學者還是經驗豐富的製模者，我們樂意與您分享技巧、建議和創意，讓您的作品更加獨特與出眾。</p>
-                        <p>"To Do Main. enjoy hobby"
-                            不僅僅是一個模型與玩具的店家，更是一個與您分享熱情和夢想的社區。我們希望透過我們的產品和服務，激發您的創造力，找回內心的童心，並與其他同好們一同交流和建立深厚的友誼。</p>
-                        <p>謝謝您選擇"To Do Main. enjoy hobby"，我們期待著能夠成為您實現興趣和夢想的最佳夥伴。請隨時來訪我們的店家。</p>
-                        </p>
-                    </div>
-                </div>
+          <div class="container">
+            <div class="side-item">
+              <div class="up_arrow">
+                <svg
+                  width="54"
+                  height="61"
+                  viewBox="0 0 54 61"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M24.5 0V9.5L10.5 24H0L24.5 0Z" fill="white" />
+                  <path d="M29.5 0V9.5L43.2143 24H53.5L29.5 0Z" fill="white" />
+                  <path d="M27 12L37.8253 24H16.1747L27 12Z" fill="white" />
+                  <circle cx="27.5" cy="39" r="5" fill="white" />
+                  <circle cx="27.5" cy="56" r="5" fill="white" />
+                </svg>
+              </div>
+              <div class="btn_shape1 btn_shape">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    class="rhombus-color"
+                    x="20.5"
+                    width="28.9914"
+                    height="28.9914"
+                    transform="rotate(45 20.5 0)"
+                    fill="#DEAA40"
+                  />
+                  <rect
+                    x="20.144"
+                    y="9.35205"
+                    width="15.2623"
+                    height="15.2623"
+                    transform="rotate(45 20.144 9.35205)"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <div class="btn-Story s-text">{{side_item.story}}</div>
+              <div class="btn_shape2 btn_shape">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    class="rhombus-color"
+                    x="20.5"
+                    width="28.9914"
+                    height="28.9914"
+                    transform="rotate(45 20.5 0)"
+                    fill="#FFFFFF"
+                  />
+                  <rect
+                    x="20.144"
+                    y="9.35205"
+                    width="15.2623"
+                    height="15.2623"
+                    transform="rotate(45 20.144 9.35205)"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <div class="btn-Introduction s-text">
+                {{side_item.introduction}}
+              </div>
+              <div class="btn_shape3 btn_shape">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    class="rhombus-color"
+                    x="20.5"
+                    width="28.9914"
+                    height="28.9914"
+                    transform="rotate(45 20.5 0)"
+                    fill="#FFFFFF"
+                  />
+                  <rect
+                    x="20.144"
+                    y="9.35205"
+                    width="15.2623"
+                    height="15.2623"
+                    transform="rotate(45 20.144 9.35205)"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <div class="btn-Instructions s-text">
+                {{side_item.instructions}}
+              </div>
+              <div class="btn_shape4 btn_shape">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    class="rhombus-color"
+                    x="20.5"
+                    width="28.9914"
+                    height="28.9914"
+                    transform="rotate(45 20.5 0)"
+                    fill="#FFFFFF"
+                  />
+                  <rect
+                    x="20.144"
+                    y="9.35205"
+                    width="15.2623"
+                    height="15.2623"
+                    transform="rotate(45 20.144 9.35205)"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <div class="btn-Service s-text">{{side_item.service}}</div>
+              <div class="down_arrow">
+                <svg
+                  width="54"
+                  height="61"
+                  viewBox="0 0 54 61"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M24.5 61V51.5L10.5 37H0L24.5 61Z" fill="white" />
+                  <path
+                    d="M29.5 61V51.5L43.2143 37H53.5L29.5 61Z"
+                    fill="white"
+                  />
+                  <path d="M27 49L37.8253 37H16.1747L27 49Z" fill="white" />
+                  <circle
+                    cx="5"
+                    cy="5"
+                    r="5"
+                    transform="matrix(1 0 0 -1 22.5 27)"
+                    fill="white"
+                  />
+                  <circle
+                    cx="5"
+                    cy="5"
+                    r="5"
+                    transform="matrix(1 0 0 -1 22.5 10)"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div class="dot dot1"></div>
+              <div class="dot dot2"></div>
+              <div class="dot dot3"></div>
+              <!-- <div class="dot dot4"></div> -->
             </div>
+            <div class="Brand-Story-text subject-text">
+              <div class="title">
+                <h2>{{title.Brand}}</h2>
+              </div>
+              <div class="text" v-for="(item, index) in Brand_text">
+                <p>{{item.p1}}</p>
+              </div>
+            </div>
+            <div class="Store-Introduction-text subject-text">
+              <div class="title">
+                <h2>{{title.Store}}</h2>
+              </div>
+              <div class="text" v-for="(item, index) in Store_text">
+                <p>{{item.p1}}</p>
+              </div>
+            </div>
+          </div>
         </section>
-    </main>
+      </main>
 
-    <!-- 到這 -->
+      <!-- 到這 -->
 
-    <footer class="todomain-footer">
+      <footer class="todomain-footer">
         <div class="footer-line">
-            <img src="pic/linear-gradient-gold.png" alt="footer-line">
+          <img src="pic/linear-gradient-gold.png" alt="footer-line" />
         </div>
         <div class="footer-logo">
-                <img src="pic/todomain_logo_white.svg" alt="logo">
+          <img src="pic/todomain_logo_white.svg" alt="logo" />
         </div>
         <div class="copy-right">
-            <p>©SOTSU・SUNRISE ©SOTSU・SUNRISE・MBS ©SOTSU・SUNRISE・TV TOKYOCopyright ©Bandai Namco Filmworks Inc. All rights reserved.</p>
-            <p>＊Note:No reproduction of contents and images is allowed.</p>
+          <p>
+            ©SOTSU・SUNRISE ©SOTSU・SUNRISE・MBS ©SOTSU・SUNRISE・TV
+            TOKYOCopyright ©Bandai Namco Filmworks Inc. All rights reserved.
+          </p>
+          <p>＊Note:No reproduction of contents and images is allowed.</p>
         </div>
-    </footer>
+      </footer>
     </div>
 
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
-        Vue.createApp({
-            data() {
-                return {
+      Vue.createApp({
+        data() {
+          return {
+            side_item: {
+              story: "品牌故事",
+              introduction: "商店簡介",
+              instructions: "購物說明",
+              service: "商店客服",
+            },
 
-                    side_item : {
-                        story:"品牌故事",
-                        introduction:"商店簡介",
-                        instructions:"購物說明",
-                        service:"商店客服"
-                    }
+            title: {
+              Brand: "品牌故事",
+              Store: "商店簡介",
+            },
 
-                    // logo: {
-                    //     gold: "pic/todomain_logo_gold.svg",
-                    //     white: "pic/todomain_logo_white.svg"
-                    // },
+            Brand_text: [
+              {
+                p1: '"To Do Main. enjoy hobby" 的品牌理念是讓消費者在日常生活中享受組裝模型的樂趣。品牌以Toys當發想，結合To Do List表示去實行小時候未完成的夢想，Main代表著這些興趣是可以伴隨您生活的主要興趣。',
+              },
+              {
+                p1: "我們想傳達的是藉由我們讓消費者在繁忙的生活中培養自己的興趣，並找回赤子之心。興趣及收藏，是您生活不可或缺的一部分，我們是伴隨您完成心願的主要夥伴。",
+              },
+              {
+                p1: '"To Do Main. enjoy hobby" 品牌將陪伴您踏上您的夢想之旅，為您提供源源不斷的創意和樂趣，讓您的生活更加豐富多彩。讓我們一起探索、創造和享受模型與玩具的無限可能性吧！',
+              },
+            ],
 
-                    // home: {
-                    //     index: "home",
-                    //     link: "index.html",
-                    //     name_tw: "首頁",
-                    //     name_en: "Home"
-                    // },
+            Store_text: [
+              { p1: '歡迎光臨"To Do Main. enjoy hobby"！' },
+              {
+                p1: "我們是一家以模型及玩具為主打的店家，專注於為消費者提供組裝模型的樂趣。無論您是模型愛好者、收藏家，還是單純喜愛手作的人，我們都是您的理想選擇。",
+              },
+              {
+                p1: "我們相信每個人都應該擁有一個屬於自己的興趣世界。因此，我們精心挑選並提供各種主題和風格的模型與玩具，以滿足您的喜好和收藏需求。不論您是追求歷史、科幻、汽車或建築等領域的愛好者，我們店內的豐富產品系列都能讓您找到心儀之作。",
+              },
+              {
+                p1: "除了商品本身，我們店內也提供豐富的資源和支援，以協助您更好地享受模型製作的過程。無論您是初學者還是經驗豐富的製模者，我們樂意與您分享技巧、建議和創意，讓您的作品更加獨特與出眾。",
+              },
+              {
+                p1: '"To Do Main. enjoy hobby" 不僅僅是一個模型與玩具的店家，更是一個與您分享熱情和夢想的社區。我們希望透過我們的產品和服務，激發您的創造力，找回內心的童心，並與其他同好們一同交流和建立深厚的友誼',
+              },
+              {
+                p1: '謝謝您選擇"To Do Main. enjoy hobby"，我們期待著能夠成為您實現興趣和夢想的最佳夥伴。請隨時來訪我們的店家。',
+              },
+            ],
 
-                    // about: {
-                    //     index: "about-us",
-                    //     link: "about-us.html",
-                    //     name_tw: "關於我們",
-                    //     name_en: "About"
-                    // },
+            // logo: {
+            //     gold: "pic/todomain_logo_gold.svg",
+            //     white: "pic/todomain_logo_white.svg"
+            // },
 
-                    // news: {
-                    //     index: "news",
-                    //     link: "#",
-                    //     name_tw: "最新消息",
-                    //     name_en: "News"
-                    // },
+            // home: {
+            //     index: "home",
+            //     link: "index.html",
+            //     name_tw: "首頁",
+            //     name_en: "Home"
+            // },
 
-                    // product: {
-                    //     index: "product",
-                    //     link: "product.html",
-                    //     name_tw: "產品列表",
-                    //     name_en: "Product"
-                    // },
+            // about: {
+            //     index: "about-us",
+            //     link: "about-us.html",
+            //     name_tw: "關於我們",
+            //     name_en: "About"
+            // },
 
-                    // customized: {
-                    //     index: "customized",
-                    //     link: "#",
-                    //     name_tw: "客製化",
-                    //     name_en: "Customized"
-                    // },
+            // news: {
+            //     index: "news",
+            //     link: "#",
+            //     name_tw: "最新消息",
+            //     name_en: "News"
+            // },
 
-                    // contactUs: {
-                    //     index: "contactUs",
-                    //     link: "#",
-                    //     name_tw: "聯絡我們",
-                    //     name_en: "Contact us"
-                    // },
+            // product: {
+            //     index: "product",
+            //     link: "product.html",
+            //     name_tw: "產品列表",
+            //     name_en: "Product"
+            // },
 
-                    // productLargePic: {
-                    //     img: "pic/product-card/fate.png"
-                    // },
+            // customized: {
+            //     index: "customized",
+            //     link: "#",
+            //     name_tw: "客製化",
+            //     name_en: "Customized"
+            // },
 
-                    // smallCard: [
-                    //     {img: "pic/product-card/hl.png"},
-                    //     {img: "pic/product-card/jk.png"},
-                    //     {img: "pic/product-card/ds.png"},
-                    //     {img: "pic/product-card/tr.png"},
-                    //     {img: "pic/product-card/mhr.png"},
-                    //     {img: "pic/product-card/kc.png"},
-                    //     {img: "pic/product-card/fgo.png"},
-                    //     {img: "pic/product-card/ss.png"},
-                    //     {img: "pic/product-card/mo.png"},
-                    //     {img: "pic/product-card/bb.png"},
-                    //     {img: "pic/product-card/od.png"},
-                    //     {img: "pic/product-card/ks.png"},
-                    //     {img: "pic/product-card/mc.png"},
-                    //     {img: "pic/product-card/hm.png"},
-                    //     {img: "pic/product-card/tf.png"},
-                    //     {img: "pic/product-card/um.png"},
-                    //     {img: "pic/product-card/gbf.png"},
-                    //     {img: "pic/product-card/hk.png"},
-                    //     {img: "pic/product-card/pc.png"},
-                    //     {img: "pic/product-card/im.png"}
-                    // ],
+            // contactUs: {
+            //     index: "contactUs",
+            //     link: "#",
+            //     name_tw: "聯絡我們",
+            //     name_en: "Contact us"
+            // },
 
-                    // productList: [
-                    //     {
-                    //         link: "product.html",
-                    //         img: "pic/icon_hot_y.png",
-                    //         style: "color: #DEAA40;",
-                    //         name_tw: "熱門作品"
-                    //     },
-                    //     {
-                    //         link: "product-gundam.html",
-                    //         img: "pic/icon_gundam.png",
-                    //         name_tw: "鋼彈模型"
-                    //     },
-                    //     {
-                    //         link: "product-figure.html",
-                    //         img: "pic/icon_scale_figure.png",
-                    //         name_tw: "比例模型"
-                    //     },
-                    //     {
-                    //         link: "#",
-                    //         img: "pic/icon_GPX.png",
-                    //         name_tw: "閃電霹靂車"
-                    //     },
-                    //     {
-                    //         link: "#",
-                    //         img: "pic/icon_to_assemble.png",
-                    //         name_tw: "組裝模型"
-                    //     }
-                    // ],
+            // productLargePic: {
+            //     img: "pic/product-card/fate.png"
+            // },
 
-                    // searchText:""
-                }
-            }
-        }).mount('#app')
-        
+            // smallCard: [
+            //     {img: "pic/product-card/hl.png"},
+            //     {img: "pic/product-card/jk.png"},
+            //     {img: "pic/product-card/ds.png"},
+            //     {img: "pic/product-card/tr.png"},
+            //     {img: "pic/product-card/mhr.png"},
+            //     {img: "pic/product-card/kc.png"},
+            //     {img: "pic/product-card/fgo.png"},
+            //     {img: "pic/product-card/ss.png"},
+            //     {img: "pic/product-card/mo.png"},
+            //     {img: "pic/product-card/bb.png"},
+            //     {img: "pic/product-card/od.png"},
+            //     {img: "pic/product-card/ks.png"},
+            //     {img: "pic/product-card/mc.png"},
+            //     {img: "pic/product-card/hm.png"},
+            //     {img: "pic/product-card/tf.png"},
+            //     {img: "pic/product-card/um.png"},
+            //     {img: "pic/product-card/gbf.png"},
+            //     {img: "pic/product-card/hk.png"},
+            //     {img: "pic/product-card/pc.png"},
+            //     {img: "pic/product-card/im.png"}
+            // ],
+
+            // productList: [
+            //     {
+            //         link: "product.html",
+            //         img: "pic/icon_hot_y.png",
+            //         style: "color: #DEAA40;",
+            //         name_tw: "熱門作品"
+            //     },
+            //     {
+            //         link: "product-gundam.html",
+            //         img: "pic/icon_gundam.png",
+            //         name_tw: "鋼彈模型"
+            //     },
+            //     {
+            //         link: "product-figure.html",
+            //         img: "pic/icon_scale_figure.png",
+            //         name_tw: "比例模型"
+            //     },
+            //     {
+            //         link: "#",
+            //         img: "pic/icon_GPX.png",
+            //         name_tw: "閃電霹靂車"
+            //     },
+            //     {
+            //         link: "#",
+            //         img: "pic/icon_to_assemble.png",
+            //         name_tw: "組裝模型"
+            //     }
+            // ],
+
+            // searchText:""
+          };
+        },
+      }).mount("#app");
     </script>
     <script>
-    $(document).ready(function() {
-  $('.btn_shape1, .btn-Story').click(function() {
-    // 替換class
-    $('body').attr('class', 'body-item1');
-    $('main').attr('class', 'main-item1');
-    $('.Brand-Story-text').css('display', 'block');
-    $('.Store-Introduction-text').css('display', 'none');
-    //重置白色
-    $('.rhombus-color').css('fill', '#FFFFFF');
-    $('.s-text').css('color', '#FFFFFF');
-    $('.btn_shape1').css('transform', 'scale(1.2)')
-    $('.btn-Story').css('transform', 'scale(1.2)')
-    $('.btn_shape2').css('transform', 'scale(1)')
-    $('.btn-Introduction').css('transform', 'scale(1)')
-    //點選的物件改黃色
-    $('.btn_shape1 .rhombus-color').css('fill', '#DEAA40');
-    $('.btn-Story').css('color', '#DEAA40');
-  });
+      $(document).ready(function () {
+        $(".btn_shape1, .btn-Story").click(function () {
+          // 替換class
+          $("body").attr("class", "body-item1");
+          $("main").attr("class", "main-item1");
+          $(".Brand-Story-text").css("display", "block");
+          $(".Store-Introduction-text").css("display", "none");
+          //重置白色
+          $(".rhombus-color").css("fill", "#FFFFFF");
+          $(".s-text").css("color", "#FFFFFF");
+          $(".btn_shape1").css("transform", "scale(1.2)");
+          $(".btn-Story").css("transform", "scale(1.2)");
+          $(".btn_shape2").css("transform", "scale(1)");
+          $(".btn-Introduction").css("transform", "scale(1)");
+          //點選的物件改黃色
+          $(".btn_shape1 .rhombus-color").css("fill", "#DEAA40");
+          $(".btn-Story").css("color", "#DEAA40");
+        });
 
-  $('.btn_shape2, .btn-Introduction').click(function() {
-    // 替換class
-    $('body').attr('class', 'body-item2');
-    $('main').attr('class', 'main-item2');
-    $('.Brand-Story-text').css('display', 'none');
-    $('.Store-Introduction-text').css('display', 'block');
-    //重置白色
-    $('.rhombus-color').css('fill', '#FFFFFF');
-    $('.s-text').css('color', '#FFFFFF');
-    $('.btn_shape1').css('transform', 'scale(1)')
-    $('.btn-Story').css('transform', 'scale(1)')
-    $('.btn_shape2').css('transform', 'scale(1.2)')
-    $('.btn-Introduction').css('transform', 'scale(1.2)')
-    //點選的物件改黃色
-    $('.btn_shape2 .rhombus-color').css('fill', '#DEAA40');
-    $('.btn-Introduction').css('color', '#DEAA40');
-  });
-});
+        $(".btn_shape2, .btn-Introduction").click(function () {
+          // 替換class
+          $("body").attr("class", "body-item2");
+          $("main").attr("class", "main-item2");
+          $(".Brand-Story-text").css("display", "none");
+          $(".Store-Introduction-text").css("display", "block");
+          //重置白色
+          $(".rhombus-color").css("fill", "#FFFFFF");
+          $(".s-text").css("color", "#FFFFFF");
+          $(".btn_shape1").css("transform", "scale(1)");
+          $(".btn-Story").css("transform", "scale(1)");
+          $(".btn_shape2").css("transform", "scale(1.2)");
+          $(".btn-Introduction").css("transform", "scale(1.2)");
+          //點選的物件改黃色
+          $(".btn_shape2 .rhombus-color").css("fill", "#DEAA40");
+          $(".btn-Introduction").css("color", "#DEAA40");
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
